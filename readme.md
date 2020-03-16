@@ -7,7 +7,7 @@
 [![Composer Downloads](https://img.shields.io/packagist/dt/ipub/slim-router.svg?style=flat-square)](https://packagist.org/packages/ipub/slim-router)
 [![License](https://img.shields.io/packagist/l/ipub/slim-router.svg?style=flat-square)](https://packagist.org/packages/ipub/slim-router)
 
-PSR-7 super slim router inspired with [FastRoute](https://github.com/nikic/FastRoute) and [Slim framework](http://www.slimframework.com).
+PSR-7 super slim router inspired with [Fast Route](https://github.com/nikic/FastRoute) and [Slim framework](http://www.slimframework.com).
 
 ## Installation
 
