@@ -316,7 +316,7 @@ class RouteCollector implements IRouteCollector
 			$this,
 			$this->responseFactory,
 			$this->controllerResolver,
-			$this->defaultInvocationHandler,
+			$this->defaultInvocationHandler
 		);
 	}
 
