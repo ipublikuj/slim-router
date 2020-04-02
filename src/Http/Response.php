@@ -303,7 +303,7 @@ class Response implements ResponseInterface
 	 * @param string $text
 	 * @param int $statusCode
 	 *
-	 * @return ResponseInterface
+	 * @return self
 	 */
 	public static function text(string $text, int $statusCode = 200): self
 	{
@@ -314,7 +314,7 @@ class Response implements ResponseInterface
 	 * @param string $html
 	 * @param int $statusCode
 	 *
-	 * @return ResponseInterface
+	 * @return self
 	 */
 	public static function html(string $html, int $statusCode = 200): self
 	{
@@ -325,7 +325,7 @@ class Response implements ResponseInterface
 	 * @param string $xml
 	 * @param int $statusCode
 	 *
-	 * @return ResponseInterface
+	 * @return self
 	 */
 	public static function xml(string $xml, int $statusCode = 200): self
 	{
@@ -341,7 +341,7 @@ class Response implements ResponseInterface
 	 * @param int $statusCode
 	 * @param int $encodeOptions
 	 *
-	 * @return ResponseInterface
+	 * @return self
 	 */
 	public static function json(array $data, int $statusCode = 200, int $encodeOptions = 0): self
 	{
@@ -359,7 +359,7 @@ class Response implements ResponseInterface
 	 * @param string $uri
 	 * @param int $status
 	 *
-	 * @return ResponseInterface
+	 * @return self
 	 */
 	public static function redirect(string $uri, int $status = 303): self
 	{
@@ -379,7 +379,7 @@ class Response implements ResponseInterface
 	/**
 	 * @param StreamInterface|null $body
 	 *
-	 * @return ResponseInterface
+	 * @return self
 	 */
 	public static function notFound(?StreamInterface $body = null): self
 	{
