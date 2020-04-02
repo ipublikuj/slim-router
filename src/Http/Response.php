@@ -155,7 +155,7 @@ class Response implements ResponseInterface
 	/**
 	 * {@inheritDoc}
 	 */
-	public function withStatus($code, $reasonPhrase = ''): ResponseInterface
+	public function withStatus($code, $reasonPhrase = ''): self
 	{
 		$clone = clone $this;
 		$clone->status = $this->validStatusCode($code);
@@ -183,7 +183,7 @@ class Response implements ResponseInterface
 	/**
 	 * {@inheritDoc}
 	 */
-	public function withProtocolVersion($version): ResponseInterface
+	public function withProtocolVersion($version): self
 	{
 		$clone = clone $this;
 		$clone->version = $this->validProtocolVersion($version);
@@ -235,7 +235,7 @@ class Response implements ResponseInterface
 	/**
 	 * {@inheritDoc}
 	 */
-	public function withHeader($name, $value): ResponseInterface
+	public function withHeader($name, $value): self
 	{
 		$clone = clone $this;
 		$clone->removeHeader($name);
@@ -247,7 +247,7 @@ class Response implements ResponseInterface
 	/**
 	 * {@inheritDoc}
 	 */
-	public function withAddedHeader($name, $value): ResponseInterface
+	public function withAddedHeader($name, $value): self
 	{
 		if (!$this->hasHeader($name)) {
 			$clone = clone $this;
@@ -272,7 +272,7 @@ class Response implements ResponseInterface
 	/**
 	 * {@inheritDoc}
 	 */
-	public function withoutHeader($name): ResponseInterface
+	public function withoutHeader($name): self
 	{
 		$clone = clone $this;
 		$clone->removeHeader($name);
@@ -291,7 +291,7 @@ class Response implements ResponseInterface
 	/**
 	 * {@inheritDoc}
 	 */
-	public function withBody(StreamInterface $body): ResponseInterface
+	public function withBody(StreamInterface $body): self
 	{
 		$clone = clone $this;
 		$clone->body = $body;
@@ -305,7 +305,7 @@ class Response implements ResponseInterface
 	 *
 	 * @return ResponseInterface
 	 */
-	public static function text(string $text, int $statusCode = 200): ResponseInterface
+	public static function text(string $text, int $statusCode = 200): self
 	{
 		return new self($statusCode, Stream::fromBodyString($text), ['Content-Type' => 'text/plain']);
 	}
@@ -316,7 +316,7 @@ class Response implements ResponseInterface
 	 *
 	 * @return ResponseInterface
 	 */
-	public static function html(string $html, int $statusCode = 200): ResponseInterface
+	public static function html(string $html, int $statusCode = 200): self
 	{
 		return new self($statusCode, Stream::fromBodyString($html), ['Content-Type' => 'text/html']);
 	}
@@ -327,7 +327,7 @@ class Response implements ResponseInterface
 	 *
 	 * @return ResponseInterface
 	 */
-	public static function xml(string $xml, int $statusCode = 200): ResponseInterface
+	public static function xml(string $xml, int $statusCode = 200): self
 	{
 		return new self($statusCode, Stream::fromBodyString($xml), ['Content-Type' => 'application/xml']);
 	}
@@ -343,7 +343,7 @@ class Response implements ResponseInterface
 	 *
 	 * @return ResponseInterface
 	 */
-	public static function json(array $data, int $statusCode = 200, int $encodeOptions = 0): ResponseInterface
+	public static function json(array $data, int $statusCode = 200, int $encodeOptions = 0): self
 	{
 		$defaultEncode = JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_HEX_QUOT | JSON_UNESCAPED_SLASHES | JSON_FORCE_OBJECT;
 		$serialized = json_encode($data, $defaultEncode ^ $encodeOptions);
@@ -361,7 +361,7 @@ class Response implements ResponseInterface
 	 *
 	 * @return ResponseInterface
 	 */
-	public static function redirect(string $uri, int $status = 303): ResponseInterface
+	public static function redirect(string $uri, int $status = 303): self
 	{
 		if ($status < 300 || $status > 399) {
 			throw new Exceptions\InvalidArgumentException('Invalid status code for redirect response');
@@ -381,7 +381,7 @@ class Response implements ResponseInterface
 	 *
 	 * @return ResponseInterface
 	 */
-	public static function notFound(?StreamInterface $body = null): ResponseInterface
+	public static function notFound(?StreamInterface $body = null): self
 	{
 		return new self(404, $body ?? Stream::fromResourceUri('php://temp'));
 	}
