@@ -23,13 +23,13 @@ class HttpException extends Exception
 {
 
 	/** @var ServerRequestInterface */
-	protected $request;
+	protected ServerRequestInterface $request;
 
 	/** @var string */
-	protected $title = '';
+	protected string $title = '';
 
 	/** @var string */
-	protected $description = '';
+	protected string $description = '';
 
 	/**
 	 * @param ServerRequestInterface $request

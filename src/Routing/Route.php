@@ -31,43 +31,43 @@ class Route implements IRoute, RequestHandlerInterface
 {
 
 	/** @var string[] */
-	private $methods = [];
+	private array $methods = [];
 
 	/** @var string */
-	private $pattern;
+	private string $pattern;
 
 	/** @var string */
-	private $identifier;
+	private string $identifier;
 
 	/** @var string|null */
-	private $name;
+	private ?string $name = null;
 
 	/** @var mixed[] */
-	private $arguments = [];
+	private array $arguments = [];
 
 	/** @var mixed[] */
-	private $savedArguments = [];
+	private array $savedArguments = [];
 
 	/** @var callable|string|mixed[] */
 	private $callable;
 
 	/** @var IRouteCollector */
-	private $routeCollector;
+	private IRouteCollector $routeCollector;
 
 	/** @var Routing\Handlers\IHandler */
-	private $invocationHandler;
+	private Routing\Handlers\IHandler $invocationHandler;
 
 	/** @var Controllers\IControllerResolver */
-	private $controllerResolver;
+	private Controllers\IControllerResolver $controllerResolver;
 
 	/** @var ResponseFactoryInterface */
-	private $responseFactory;
+	private ResponseFactoryInterface $responseFactory;
 
 	/** @var Middleware\MiddlewareDispatcher */
-	private $middlewareDispatcher;
+	private Middleware\MiddlewareDispatcher $middlewareDispatcher;
 
 	/** @var bool */
-	private $groupMiddlewareAppended = false;
+	private bool $groupMiddlewareAppended = false;
 
 	/**
 	 * @param string[] $methods                 The route HTTP methods
@@ -251,6 +251,7 @@ class Route implements IRoute, RequestHandlerInterface
 		if (
 			is_array($callable)
 			&& $callable[0] instanceof RequestHandlerInterface
+			&& class_implements($strategy) !== false
 			&& !in_array(Routing\Handlers\IRequestHandler::class, class_implements($strategy), true)
 		) {
 			$strategy = new Routing\Handlers\RequestHandler();

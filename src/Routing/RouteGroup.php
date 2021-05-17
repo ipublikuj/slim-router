@@ -21,10 +21,10 @@ class RouteGroup implements IRouteGroup
 {
 
 	/** @var string */
-	private $pattern;
+	private string $pattern;
 
 	/** @var IRouteCollector */
-	private $routeCollector;
+	private IRouteCollector $routeCollector;
 
 	public function __construct(
 		string $pattern,

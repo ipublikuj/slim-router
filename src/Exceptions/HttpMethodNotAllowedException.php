@@ -21,7 +21,7 @@ class HttpMethodNotAllowedException extends HttpSpecializedException
 {
 
 	/** @var string[] */
-	protected $allowedMethods = [];
+	protected array $allowedMethods = [];
 
 	/** @var int */
 	protected $code = 405;
@@ -30,10 +30,10 @@ class HttpMethodNotAllowedException extends HttpSpecializedException
 	protected $message = 'Method not allowed.';
 
 	/** @var string */
-	protected $title = '405 Method Not Allowed';
+	protected string $title = '405 Method Not Allowed';
 
 	/** @var string */
-	protected $description = 'The request method is not supported for the requested resource.';
+	protected string $description = 'The request method is not supported for the requested resource.';
 
 	/**
 	 * @return string[]

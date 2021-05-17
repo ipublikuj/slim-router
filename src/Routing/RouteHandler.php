@@ -27,10 +27,10 @@ class RouteHandler implements RequestHandlerInterface
 {
 
 	/** @var IRouter */
-	private $router;
+	private IRouter $router;
 
 	/** @var FastRouteDispatcher|null */
-	private $dispatcher;
+	private ?FastRouteDispatcher $dispatcher = null;
 
 	public function __construct(IRouter $router)
 	{
