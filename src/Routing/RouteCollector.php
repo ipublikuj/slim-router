@@ -31,31 +31,31 @@ class RouteCollector implements IRouteCollector
 {
 
 	/** @var string */
-	private $pattern;
+	private string $pattern;
 
 	/** @var IRouteCollector|null */
-	private $routeCollector;
+	private ?IRouteCollector $routeCollector = null;
 
 	/** @var IRouteParser */
-	private $routeParser;
+	private IRouteParser $routeParser;
 
 	/** @var Controllers\IControllerResolver */
-	private $controllerResolver;
+	private Controllers\IControllerResolver $controllerResolver;
 
 	/** @var Routing\Handlers\IHandler */
-	private $defaultInvocationHandler;
+	private Routing\Handlers\IHandler $defaultInvocationHandler;
 
 	/** @var IRoute[] */
-	private $routes = [];
+	private array $routes = [];
 
 	/** @var IRouteGroup[] */
-	private $groups = [];
+	private array $groups = [];
 
 	/** @var MiddlewareInterface[] */
-	private $middleware = [];
+	private array $middleware = [];
 
 	/** @var ResponseFactoryInterface */
-	private $responseFactory;
+	private ResponseFactoryInterface $responseFactory;
 
 	public function __construct(
 		ResponseFactoryInterface $responseFactory,

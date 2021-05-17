@@ -23,10 +23,10 @@ class RoutingResults
 	public const METHOD_NOT_ALLOWED = 2;
 
 	/** @var string */
-	private $method;
+	private string $method;
 
 	/** @var string */
-	private $uri;
+	private string $uri;
 
 	/**
 	 * The status is one of the constants shown above
@@ -37,13 +37,13 @@ class RoutingResults
 	 *
 	 * @var int
 	 */
-	private $routeStatus;
+	private int $routeStatus;
 
 	/** @var string|null */
-	private $routeIdentifier;
+	private ?string $routeIdentifier = null;
 
 	/** @var mixed[] */
-	private $routeArguments = [];
+	private array $routeArguments = [];
 
 	/**
 	 * @param string $method

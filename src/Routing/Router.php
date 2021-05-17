@@ -35,19 +35,19 @@ class Router implements IRouter
 	public const BASE_PATH = '__basePath__';
 
 	/** @var string */
-	private $basePath = '';
+	private string $basePath = '';
 
 	/** @var ResponseFactoryInterface */
-	private $responseFactory;
+	private ResponseFactoryInterface $responseFactory;
 
 	/** @var IRouteCollector */
-	private $routeCollector;
+	private IRouteCollector $routeCollector;
 
 	/** @var IRouteParser */
-	private $routeParser;
+	private IRouteParser $routeParser;
 
 	/** @var IMiddlewareDispatcher */
-	private $middlewareDispatcher;
+	private IMiddlewareDispatcher $middlewareDispatcher;
 
 	public function __construct(
 		?ResponseFactoryInterface $responseFactory = null,

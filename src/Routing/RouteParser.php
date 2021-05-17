@@ -23,10 +23,10 @@ class RouteParser implements IRouteParser
 {
 
 	/** @var IRouter */
-	private $router;
+	private IRouter $router;
 
 	/** @var Std */
-	private $routeParser;
+	private Std $routeParser;
 
 	public function __construct(IRouter $router)
 	{

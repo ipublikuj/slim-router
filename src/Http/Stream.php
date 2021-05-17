@@ -33,16 +33,16 @@ class Stream implements StreamInterface
 	private $resource = null;
 
 	/** @var mixed[]|null */
-	private $metaData = null;
+	private ?array $metaData = null;
 
 	/** @var bool|null */
-	private $readable = null;
+	private ?bool $readable = null;
 
 	/** @var bool|null */
-	private $writable = null;
+	private ?bool $writable = null;
 
 	/** @var bool|null */
-	private $seekable = null;
+	private ?bool $seekable = null;
 
 	/**
 	 * @param resource $resource One of the stream type resources

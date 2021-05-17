@@ -36,7 +36,7 @@ class MiddlewareDispatcher implements IMiddlewareDispatcher
 	 *
 	 * @var RequestHandlerInterface
 	 */
-	private $tip;
+	private RequestHandlerInterface $tip;
 
 	/**
 	 * @param RequestHandlerInterface $kernel

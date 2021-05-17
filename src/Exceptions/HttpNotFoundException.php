@@ -25,9 +25,9 @@ class HttpNotFoundException extends HttpSpecializedException
 	protected $message = 'Not found.';
 
 	/** @var string */
-	protected $title = '404 Not Found';
+	protected string $title = '404 Not Found';
 
 	/** @var string */
-	protected $description = 'The requested resource could not be found. Please verify the URI and try again.';
+	protected string $description = 'The requested resource could not be found. Please verify the URI and try again.';
 
 }
