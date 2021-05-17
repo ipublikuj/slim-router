@@ -3,7 +3,7 @@
 [![Build Status](https://badgen.net/github/checks/ipublikuj/slim-router/master?cache=300&style=flast-square)](https://github.com/ipublikuj/slim-router)
 [![Code coverage](https://badgen.net/coveralls/c/github/ipublikuj/slim-router?cache=300&style=flast-square)](https://coveralls.io/github/ipublikuj/slim-router)
 ![PHP](https://badgen.net/packagist/php/ipub/slim-router?cache=300&style=flast-square)
-[![Licence](https://badgen.net/packagist/license/ipub/slim-router?cache=300&style=flast-square)](https://github.com/ipublikuj/slim-router/blob/master/license.md)
+[![Licence](https://badgen.net/packagist/license/ipub/slim-router?cache=300&style=flast-square)](https://github.com/ipublikuj/slim-router/blob/master/LICENSE.md)
 [![Downloads total](https://badgen.net/packagist/dt/ipub/slim-router?cache=300&style=flast-square)](https://packagist.org/packages/ipub/slim-router)
 [![Latest stable](https://badgen.net/packagist/v/ipub/slim-router/latest?cache=300&style=flast-square)](https://packagist.org/packages/ipub/slim-router)
 [![PHPStan](https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat-square)](https://github.com/phpstan/phpstan)

@@ -3,7 +3,7 @@
 /**
  * HttpMethodNotAllowedException.php
  *
- * @license        More in license.md
+ * @license        More in LICENSE.md
  * @copyright      https://www.ipublikuj.eu
  * @author         Adam Kadlec <adam.kadlec@ipublikuj.eu>
  * @package        iPublikuj:SlimRouter!
