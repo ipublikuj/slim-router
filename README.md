@@ -12,10 +12,10 @@ PSR-7 super slim router inspired with [Fast Route](https://github.com/nikic/Fast
 
 ## Installation
 
-The best way to install ipub/slim-router is using [Composer](http://getcomposer.org/):
+The best way to install **ipub/slim-router** is using [Composer](http://getcomposer.org/):
 
 ```sh
-$ composer require ipub/slim-router
+composer require ipub/slim-router
 ```
 
 ## Documentation

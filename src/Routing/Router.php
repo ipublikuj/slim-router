@@ -226,7 +226,9 @@ class Router implements IRouter
 	}
 
 	/**
-	 * @return RecursiveArrayIterator<IRoute>
+	 * @return RecursiveArrayIterator
+	 *
+	 * @phpstan-return RecursiveArrayIterator<IRoute>
 	 */
 	public function getIterator(): RecursiveArrayIterator
 	{

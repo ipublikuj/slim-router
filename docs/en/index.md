@@ -4,10 +4,10 @@ Using this library is super-easy. Router is build on top of [Fast Route](https:/
 
 ## Installation
 
-The best way to install ipub/slim-router is using [Composer](http://getcomposer.org/):
+The best way to install **ipub/slim-router** is using [Composer](http://getcomposer.org/):
 
 ```sh
-$ composer require ipub/slim-router
+composer require ipub/slim-router
 ```
 
 ## Creating routes
